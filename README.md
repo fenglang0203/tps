@@ -4,7 +4,7 @@ TPS is a cli for [tps.tms.taobao.com](http://tps.tms.taobao.com/), and can only 
 
 ## Install
 
-```
+```bash
 $ npm install tps -g
 ```
 
@@ -12,21 +12,21 @@ $ npm install tps -g
 
 in command line
 
-```
+```bash
 $ tps a.jpg
 $ tps a.jpg b.jpg
 ```
 
 in node
 
-``` javascript
+```javascript
 var tps = require('tps');
 tps('a.jpg', function(e, url) {
   console.log(url);
 });
 ```
 
-``` javascript
+```javascript
 var tps = require('tps');
 tps(['a.jpg', 'b.jpg'], function(e, urls) {
   console.log(urls.join('\n'));
