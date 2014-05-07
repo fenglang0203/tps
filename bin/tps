@@ -1,0 +1,21 @@
+#!/usr/bin/env node
+'use strict';
+
+var program = require('commander');
+var tps = require('../');
+
+program
+  .usage('IMAGE_PATH')
+  .version(require('../package').version, '-v, --version')
+  .parse(process.argv);
+
+var files = program.args;
+
+if (!files.length) {
+  program.help();
+}
+
+tps(files, function(err, urls) {
+  if (err) throw Error(err);
+  console.log(urls.join('\n'));
+});

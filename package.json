@@ -1,0 +1,36 @@
+{
+  "name": "tps",
+  "version": "0.1.0",
+  "description": "cli for tps.tms.taobao.com",
+  "main": "index.js",
+  "bin": {
+    "tps": "./bin/tps"
+  },
+  "scripts": {
+    "test": "./node_modules/.bin/mocha --reporter spec --require should ./test/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/sorrycc/tps"
+  },
+  "keywords": [
+    "tps",
+    "upload"
+  ],
+  "author": "chencheng <sorrycc@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/sorrycc/tps/issues"
+  },
+  "homepage": "https://github.com/sorrycc/tps",
+  "dependencies": {
+    "commander": "^2.2.0",
+    "form-data": "^0.1.2",
+    "url": "^0.10.1",
+    "async": "^0.8.0"
+  },
+  "devDependencies": {
+    "should": "^3.3.1",
+    "mocha": "^1.18.2"
+  }
+}
