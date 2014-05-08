@@ -7,6 +7,7 @@ var async = require('async');
 var FormData = require('form-data');
 
 module.exports = function(files, cb) {
+  // upload single file
   if (typeof files === 'string') {
     return upload(files, cb);
   }
