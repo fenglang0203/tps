@@ -20,6 +20,7 @@ $ tps a.jpg b.jpg
 in node
 
 ```javascript
+// upload single image
 var tps = require('tps');
 tps('a.jpg', function(e, url) {
   console.log(url);
@@ -27,6 +28,7 @@ tps('a.jpg', function(e, url) {
 ```
 
 ```javascript
+// upload multiple images
 var tps = require('tps');
 tps(['a.jpg', 'b.jpg'], function(e, urls) {
   console.log(urls.join('\n'));
