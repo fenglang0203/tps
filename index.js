@@ -18,6 +18,10 @@ module.exports = function(files, cb) {
 function upload(file, cb) {
   var form = new FormData();
 
+  if (!fs.existsSync(file)) {
+    return cb(new Error('Uncaught Error: ENOENT, open \''+file+'\''));
+  }
+
   var params = {
     nick: encodeURIComponent('云谦'),
     session_id: '012345678',

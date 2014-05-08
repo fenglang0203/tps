@@ -20,5 +20,12 @@ describe('tps', function() {
       done();
     });
   });
+
+  it('should throw error when img is not exist', function(done) {
+    tps('./test/fixtures/img-not-exist.png', function(e, url) {
+      e.should.not.be.eql(null);
+      done();
+    });
+  });
 });
 
